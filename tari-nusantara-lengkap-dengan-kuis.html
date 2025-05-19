@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tari Nusantara</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+    }
+    nav {
+      background-color: #e0f2f1;
+      display: flex;
+      justify-content: center;
+      padding: 0.5em;
+      flex-wrap: wrap;
+    }
+    nav a {
+      margin: 0.5em 1em;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2em;
+      text-align: center;
+    }
+    .map-img {
+      width: 100%;
+      max-width: 1000px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 2em auto;
+      max-width: 800px;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .quiz-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .quiz-button:hover {
+      background-color: #45a049;
+    }
+    .benar {
+      color: green;
+      font-weight: bold;
+    }
+    .salah {
+      color: red;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tari Nusantara</h1>
+    <p>Jelajahi dan pelajari tarian daerah Indonesia!</p>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#peta">Peta Tari</a>
+    <a href="#video">Galeri Video</a>
+    <a href="#kuis">Kuis</a>
+  </nav>
+
+  <div class="container" id="beranda">
+    <h2>Selamat datang, Sobat Budaya!</h2>
+    <p>Klik peta atau menu di atas untuk mengenal berbagai tarian tradisional dari seluruh Nusantara.</p>
+    <img src="peta-indonesia.jpg" usemap="#peta-nusantara" alt="Peta Indonesia" class="map-img">
+
+    <map name="peta-nusantara">
+      <area shape="rect" coords="520,600,570,640" href="#bali" alt="Bali" title="Tari Kecak - Bali">
+      <area shape="rect" coords="450,540,500,580" href="#jawatengah" alt="Jawa Tengah" title="Tari Gambyong - Jawa Tengah">
+      <area shape="rect" coords="300,440,360,480" href="#sumbar" alt="Sumatera Barat" title="Tari Piring - Sumatera Barat">
+      <area shape="rect" coords="600,400,650,440" href="#kalimantan" alt="Kalimantan Timur" title="Tari Hudoq - Kalimantan Timur">
+      <area shape="rect" coords="850,450,900,490" href="#papua" alt="Papua" title="Tari Musyoh - Papua">
+    </map>
+  </div>
+
+  <div class="container card" id="peta">
+    <h2>Pilih Daerah dan Kenali Tariannya</h2>
+    <ul style="list-style: none; padding-left: 0; text-align: left;">
+      <li><strong>Jawa Tengah:</strong> Tari Gambyong</li>
+      <li><strong>Bali:</strong> Tari Kecak</li>
+      <li><strong>Sumatera Barat:</strong> Tari Piring</li>
+      <li><strong>Kalimantan Timur:</strong> Tari Hudoq</li>
+      <li><strong>Maluku:</strong> Tari Cakalele</li>
+      <li><strong>Papua:</strong> Tari Musyoh</li>
+    </ul>
+  </div>
+
+  <div class="container card" id="video">
+    <h2>Galeri Video Tarian Daerah</h2>
+
+    <h3 id="bali">Tari Kecak - Bali</h3>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/gjd78XHZazY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Tari Kecak adalah tari tradisional Bali yang terkenal dengan suara "cak cak cak" yang diucapkan secara ritmis oleh puluhan penari pria.</p>
+
+    <h3 id="sumbar">Tari Piring - Sumatera Barat</h3>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/1O_OYwnV6iw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Tari Piring menggunakan properti piring di tangan para penari yang menggambarkan rasa syukur dan kebersamaan masyarakat Minangkabau.</p>
+
+    <h3 id="jawatengah">Tari Gambyong - Jawa Tengah</h3>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/ua5ljHVBV64" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Tari Gambyong berasal dari Surakarta dan dikenal dengan gerakan lembut serta kostum berwarna hijau keemasan.</p>
+
+    <h3 id="kalimantan">Tari Hudoq - Kalimantan Timur</h3>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/nVM10FmnTEc" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Tari Hudoq adalah tarian adat suku Dayak yang biasanya dibawakan saat upacara adat menyambut musim tanam.</p>
+
+    <h3 id="papua">Tari Musyoh - Papua</h3>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/iySsCl5FWpA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>Tari Musyoh adalah tarian tradisional masyarakat Papua untuk mengusir roh jahat dan mendatangkan keselamatan.</p>
+  </div>
+
+  <div class="container card" id="kuis">
+    <h2>Kuis Interaktif Tari Nusantara</h2>
+    <form id="quiz-form">
+      <ol style="text-align: left;">
+        <li>
+          <p>1. Dari daerah manakah Tari Kecak berasal?</p>
+          <div class="soal" data-kunci="b">
+            <label><input type="radio" name="q1" value="a"> Jawa Tengah</label><br>
+            <label><input type="radio" name="q1" value="b"> Bali</label><br>
+            <label><input type="radio" name="q1" value="c"> Kalimantan Timur</label>
+            <div class="feedback"></div>
+          </div>
+        </li>
+        <li>
+          <p>2. Apa ciri khas Tari Piring?</p>
+          <div class="soal" data-kunci="a">
+            <label><input type="radio" name="q2" value="a"> Menggunakan piring</label><br>
+            <label><input type="radio" name="q2" value="b"> Memakai topeng kayu</label><br>
+            <label><input type="radio" name="q2" value="c"> Diiringi gamelan Sunda</label>
+            <div class="feedback"></div>
+          </div>
+        </li>
+        <li>
+          <p>3. Tari Hudoq berasal dari provinsi mana?</p>
+          <div class="soal" data-kunci="c">
+            <label><input type="radio" name="q3" value="a"> Bali</label><br>
+            <label><input type="radio" name="q3" value="b"> Papua</label><br>
+            <label><input type="radio" name="q3" value="c"> Kalimantan Timur</label>
+            <div class="feedback"></div>
+          </div>
+        </li>
+      </ol>
+      <button type="submit" class="quiz-button">Periksa Jawaban</button>
+    </form>
+    <div id="quiz-result" style="margin-top: 1em; font-weight: bold;"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Media Pembelajaran Seni Budaya - Tari Nusantara</p>
+  </footer>
+
+  <script>
+    const quizForm = document.getElementById('quiz-form');
+    const quizResult = document.getElementById('quiz-result');
+
+    quizForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const soalItems = quizForm.querySelectorAll('.soal');
+      let score = 0;
+
+      soalItems.forEach((soalDiv) => {
+        const jawabanBenar = soalDiv.dataset.kunci;
+        const inputs = soalDiv.querySelectorAll('input[type="radio"]');
+        const feedback = soalDiv.querySelector('.feedback');
+        let userAnswer = null;
+
+        inputs.forEach(input => {
+          if (input.checked) {
+            userAnswer = input.value;
+          }
+        });
+
+        feedback.textContent = '';
+        feedback.classList.remove('benar', 'salah');
+
+        if (userAnswer === jawabanBenar) {
+          feedback.textContent = "✔ Jawaban Benar!";
+          feedback.classList.add('benar');
+          score++;
+        } else if (userAnswer !== null) {
+          feedback.textContent = `✘ Salah. Jawaban yang benar: ${jawabanBenar.toUpperCase()}`;
+          feedback.classList.add('salah');
+        } else {
+          feedback.textContent = "❗ Belum dijawab.";
+          feedback.classList.add('salah');
+        }
+      });
+
+      quizResult.textContent = `Skor kamu: ${score} dari ${soalItems.length}`;
+      quizResult.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</div>
+</body>
+</html>
